@@ -27,7 +27,15 @@ dependencies {
 	runtimeOnly 'com.h2database:h2'
 	annotationProcessor 'org.projectlombok:lombok'
 	testImplementation 'org.springframework.boot:spring-boot-starter-test'
+	implementation 'org.springframework.boot:spring-boot-devtools'
 	testImplementation 'org.springframework.security:spring-security-test'
+
+	//mysql
+	runtimeOnly 'mysql:mysql-connector-java'
+	// https://mvnrepository.com/artifact/org.slf4j/slf4j-api
+	implementation group: 'org.slf4j', name: 'slf4j-api', version: '1.7.25'
+
+	implementation group: 'org.springframework.boot', name: 'spring-boot-starter-tomcat', version: '2.1.1.RELEASE'
 }
 
 tasks.named('test') {

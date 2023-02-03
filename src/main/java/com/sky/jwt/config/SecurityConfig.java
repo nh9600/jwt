@@ -15,6 +15,8 @@ public class SecurityConfig  {
         return (web) -> web.ignoring().antMatchers("/h2-console/**", "/favicon.ico");
     }
 
+
+
     @Bean
     protected SecurityFilterChain filterChain(HttpSecurity http) throws Exception {
         http
