@@ -9,13 +9,10 @@ import org.springframework.security.web.SecurityFilterChain;
 @EnableWebSecurity
 public class SecurityConfig  {
 
-
     @Bean
     public WebSecurityCustomizer webSecurityCustomizer() {
         return (web) -> web.ignoring().antMatchers("/h2-console/**", "/favicon.ico");
     }
-
-
 
     @Bean
     protected SecurityFilterChain filterChain(HttpSecurity http) throws Exception {
